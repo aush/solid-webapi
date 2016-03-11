@@ -27,7 +27,8 @@
     "lint": "eslint src/**/*.js*",
     "prod": "better-npm-run prod",
     "start": "npm run dev",
-    "test": "better-npm-run test"
+    "test": "better-npm-run test",
+    "cover": "better-npm-run cover"
   },
   "betterScripts": {
     "dev": {
@@ -46,6 +47,13 @@
     },
     "test": {
       "command": "mocha test/**/*.spec.js",
+      "env": {
+        "NODE_ENV": "test",
+        "PORT": 8080
+      }
+    },
+    "cover": {
+      "command": "istanbul cover node_modules/mocha/bin/_mocha -- test/**/*.spec.js",
       "env": {
         "NODE_ENV": "test",
         "PORT": 8080
@@ -74,7 +82,7 @@
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.1",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5"
-  },
-  "private": true
+  }
 }
