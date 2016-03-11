@@ -6,7 +6,7 @@ const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const Promise = require('bluebird');
 const mongoose = require('mongoose');
-const config = require('../../../src/app/config');
+const config = require('../../src/app/config');
 
 chai.use(chaiAsPromised);
 
@@ -23,7 +23,7 @@ describe('data', () => {
     return connection
       .open(config.db.test)
       .then(() => connection.db.dropDatabase())
-      .then(() => { actions = require('../../../src/app/data/actions')(connection); })
+      .then(() => { actions = require('../../src/app/data/actions')(connection); })
       .catch(err => { console.log(err); return connection.close(); });
   });
 

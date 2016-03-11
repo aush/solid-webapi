@@ -61,7 +61,7 @@
       }
     },
     "test-travis": {
-      "command": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- test/**/*.spec.js && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+      "command": "istanbul cover -x 'src/api/bootstrap.js' node_modules/mocha/bin/_mocha --report lcovonly -- test/**/*.spec.js && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
       "env": {
         "NODE_ENV": "test",
         "PORT": 8080
