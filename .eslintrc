@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "func-names": 0,
+    "max-len": 0,
+    "new-cap": 0,
+    "no-console": 0,
+    "react/prefer-stateless-function": 0,
+    "babel/arrow-parens": 0,
+    "babel/generator-star-spacing": 2,
+    "babel/new-cap": 0,
+    "babel/no-await-in-loop": 2,
+    "babel/object-shorthand": 2
+  },
+  "plugins": [
+    "babel"
+  ]
+}
