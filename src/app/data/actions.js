@@ -8,7 +8,5 @@ module.exports = (connection) => {
       (data) => DataModel.find(data || {}).exec().then(results => _.map(results, r => r.toObject())),
     addData:
       (data) => new DataModel(data).save(),
-    deleteData:
-      (data) => DataModel.find(data || {}).remove().exec(),
   };
 };
